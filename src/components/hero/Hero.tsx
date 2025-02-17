@@ -11,7 +11,7 @@ const saira = Saira({
 
 export default function Hero() {
   return (
-    <div className="relative bg-black overflow-hidden flex flex-col mb-10">
+    <div className="relative bg-[#1c1c1c] overflow-hidden flex flex-col mb-10">
       {/* Vertical SOFTCONIC text */}
       <div className="absolute left-0 top-0 h-full w-40 border-r-[1px] border-gray-300 hidden lg:flex items-center justify-center">
         <div
@@ -80,7 +80,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom Ticker */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden border-t border-white/10 bg-black/50 py-2 lg:py-4 backdrop-blur-sm">
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden border-t border-white bg-[#1c1c1c]/70 py-2 lg:py-4 backdrop-blur-sm">
         <div className="flex whitespace-nowrap animate-[ticker_30s_linear_infinite] lg:gap-14">
           {[...Array(1)].map((_, i) => (
             <div key={i} className="flex justify-center items-center gap-20 ">
