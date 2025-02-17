@@ -6,6 +6,8 @@ import NavigationOverlay from "@/components/navigation-overlay/NavigationOverlay
 import ValuesCulture from "@/components/values-and-culture/ValuesCulture"
 import { useLoadingDelay } from "@/hooks/use-loading-delay"
 import LoadingScreen from "@/components/loading-screen/LoadingScreen"
+import ServicesSection from "@/components/services/ServiceSection"
+import ProcessSection from "@/components/the-process/Process"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -26,6 +28,8 @@ export default function Home() {
           <NavigationOverlay isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
           <Hero />
           <ValuesCulture />
+          <ServicesSection/>
+          <ProcessSection/>
         </div>
 
       }
