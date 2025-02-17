@@ -44,7 +44,7 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl lg:text-[64px] font-bold leading-tight tracking-tight text-white"
+            className="text-4xl lg:text-[50px] xl:text-[64px] font-bold leading-tight tracking-tight text-white"
           >
             UNLOCK YOUR
             <br />

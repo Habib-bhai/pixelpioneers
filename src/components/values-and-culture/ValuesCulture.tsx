@@ -78,18 +78,18 @@ export default function AnimatedSection() {
             ${isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"}`}
                     onMouseMove={handleMouseMove}
                 >
-                    <div className="rounded-2xl overflow-hidden">
+                    <div className="w-screen sm:w-96 h-96  rounded-2xl overflow-hidden">
                         <Image
                             src="/images/pexels3.jpg"
                             fill
                             alt="Team working in office"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover rounded-2xl"
                         />
                     </div>
 
                     <div
                         ref={circleRef}
-                        className={`absolute -bottom-20 -left-20 w-[300px] h-[300px] rounded-full overflow-hidden 
+                        className={`hidden md:block absolute -bottom-20 -left-20 w-[300px] h-[300px] rounded-full overflow-hidden 
               transition-all duration-500 ease-out
               ${isInView ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}
                         style={{
