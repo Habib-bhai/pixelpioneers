@@ -8,6 +8,7 @@ import { useLoadingDelay } from "@/hooks/use-loading-delay"
 import LoadingScreen from "@/components/loading-screen/LoadingScreen"
 import ServicesSection from "@/components/services/ServiceSection"
 import ProcessSection from "@/components/the-process/Process"
+import CaseStudiesSection from "@/components/case-study/CaseStudySection"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -30,6 +31,7 @@ export default function Home() {
           <ValuesCulture />
           <ServicesSection/>
           <ProcessSection/>
+          <CaseStudiesSection />
         </div>
 
       }
