@@ -14,7 +14,7 @@ interface CaseStudyCardProps {
   index?: number
 }
 
-export function CaseStudyCard({ category, title, image, href = "#", isInView = false, index = 0 }: CaseStudyCardProps) {
+export function CaseStudyCard({ category, title, image, isInView = false, index = 0 }: CaseStudyCardProps) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
