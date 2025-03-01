@@ -81,3 +81,23 @@
     transform: translateX(-100%);
   }
 }
+
+
+/* Star movement animation */
+@keyframes move {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+/* Cursor blinking */
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: white;
+  vertical-align: middle;
+}
