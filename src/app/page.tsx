@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       {isLoading ? <LoadingScreen /> :
-        <div className="w-screen bg-black text-white">
+        <div className="w-screen bg-black text-white overflow-x-hidden">
           <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
           <NavigationOverlay isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
           <Hero />
