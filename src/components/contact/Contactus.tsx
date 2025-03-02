@@ -3,10 +3,12 @@
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export default function ContactUs() {
   const imageRef = useRef<HTMLDivElement>(null)
   const [imageError, setImageError] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     // Parallax effect on scroll
@@ -86,7 +88,7 @@ export default function ContactUs() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <button className="bg-emerald-500 hover:bg-emerald-600 text-black font-medium py-3 px-8 transition-all duration-300 ease-in-out transform hover:shadow-lg">
+          <button onClick={()=> router.push("/contact")} className="bg-emerald-500 hover:bg-emerald-600 text-black font-medium py-3 px-8 transition-all duration-300 ease-in-out transform hover:shadow-lg">
             Get a quote
           </button>
         </motion.div>

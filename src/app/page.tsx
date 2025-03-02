@@ -12,6 +12,8 @@ import CaseStudiesSection from "@/components/case-study/CaseStudySection"
 import CreativeBanner from "@/components/Banner/CreativeBanner"
 import SuccessStories from "@/components/successStories/SuccessStories"
 import ContactUs from "@/components/contact/Contactus"
+import OurExperts from "@/components/team/OurExperts"
+import Footer from "@/components/footer/Footer"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -78,6 +80,8 @@ export default function Home() {
           <CreativeBanner/>
           <SuccessStories  stories={dummyStories}/>
           <ContactUs/>
+          <OurExperts/>
+          <Footer/>
         </div>
 
       }

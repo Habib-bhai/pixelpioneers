@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { Plus } from "lucide-react"
+import { Facebook, Plus, Twitter, PinIcon as Pinterest, Instagram } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 interface NavigationOverlayProps {
@@ -11,7 +11,7 @@ interface NavigationOverlayProps {
 
 const menuItems = ["HOME", "ABOUT", "SERVICE", "PROJECT", "CASE STUDY", "BLOG", "CONTACT"]
 
-export default function NavigationOverlay({ isOpen}: NavigationOverlayProps) {
+export default function NavigationOverlay({ isOpen }: NavigationOverlayProps) {
 
   const router = useRouter()
 
@@ -24,6 +24,22 @@ export default function NavigationOverlay({ isOpen}: NavigationOverlayProps) {
           exit={{ opacity: 0, y: -20 }}
           className="fixed inset-0 z-40 bg-black"
         >
+
+          {/* Social Links */}
+          <div className=" fixed right-2 lg:right-[2.5%] xl:right-[1%]  top-[40%] z-30 -translate-y-1/2 lg:flex flex-col space-y-6 lg:space-y-8">
+            {[Facebook, Twitter, Pinterest, Instagram].map((Icon, index) => (
+              <motion.a
+                key={index}
+                href="#"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="flex h-8 w-8 lg:h-10 lg:w-10 items-center justify-center text-white/60 hover:text-white transition-colors"
+              >
+                <Icon className="h-8 w-8" />
+              </motion.a>
+            ))}
+          </div>
           <div className="relative flex h-full">
             {/* Background Text - Hidden on mobile */}
             <motion.div
@@ -52,7 +68,7 @@ export default function NavigationOverlay({ isOpen}: NavigationOverlayProps) {
                     }}
                     className="group"
                   >
-                    <button onClick={()=> router.push(`/${item.toLowerCase()}`)} className="flex items-center gap-4 text-2xl lg:text-4xl font-bold">
+                    <button onClick={() => router.push(`/${item.toLowerCase()}`)} className="flex items-center gap-4 text-2xl lg:text-4xl font-bold">
                       <span className="relative">
                         {item}
                         <span className="absolute inset-0 text-transparent [-webkit-text-stroke:1px_white] group-hover:text-white transition-colors duration-300">

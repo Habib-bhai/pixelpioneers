@@ -22,21 +22,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Social Links */}
-      <div className="hidden fixed right-2 lg:right-5 top-1/3 z-30 -translate-y-1/2 md:flex flex-col space-y-6 lg:space-y-8">
-        {[Facebook, Twitter, Pinterest, Instagram].map((Icon, index) => (
-          <motion.a
-            key={index}
-            href="#"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="flex h-8 w-8 lg:h-10 lg:w-10 items-center justify-center text-white/60 hover:text-white transition-colors"
-          >
-            <Icon className="h-4 w-4 lg:h-8 lg:w-8" />
-          </motion.a>
-        ))}
-      </div>
+     
 
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row h-full lg:h-screen items-center px-6 lg:pl-[180px] lg:pr-16 pt-20 lg:pt-0">
