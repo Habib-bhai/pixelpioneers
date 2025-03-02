@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowUpRight, Facebook, Twitter, Instagram, PinIcon as Pinterest } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 import { Saira } from "next/font/google"
 const saira = Saira({

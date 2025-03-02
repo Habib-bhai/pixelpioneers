@@ -2,8 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { div } from "framer-motion/client";
 import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
 
 // Define the type for an expert card
@@ -19,18 +17,13 @@ interface Expert {
     };
 }
 
-// Animation variants for the card
-const cardVariants = {
-    initial: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 50.5 } },
-    hover: { scale: 1.05, transition: { duration: 50.3 } },
-};
+
 
 const TeamMember: React.FC<Expert> = ({
     name,
     title,
     imageUrl,
-    socialLinks,
+    // socialLinks,
 }) => {
     return (
         <div className="hover:-translate-y-2 relative group hover:rounded-none transition-all duration-500 flex flex-col justify-center items-center w-56 h-64 rounded-t-full border-gray-700 border-[1px] gap-4 pt-4">

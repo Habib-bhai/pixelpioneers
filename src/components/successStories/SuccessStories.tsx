@@ -126,24 +126,5 @@ const SuccessStories: React.FC<{ stories: SuccessStory[] }> = ({ stories }) => {
   );
 };
 
-// Example usage with dummy data
-const App: React.FC = () => {
-  const dummyStories: SuccessStory[] = [
-    {
-      metrics: "Digital Marketing",
-      title: "Optimizing IT Infrastructure For Cost Efficiency",
-      imageUrl: "https://via.placeholder.com/600x400",
-      link: "#",
-    },
-    {
-      metrics: "Cloud Solutions",
-      title: "Scaling Enterprise Cloud for Performance",
-      imageUrl: "https://via.placeholder.com/600x400",
-      link: "#",
-    },
-  ];
-
-  return <SuccessStories stories={dummyStories} />;
-};
 
 export default SuccessStories;
