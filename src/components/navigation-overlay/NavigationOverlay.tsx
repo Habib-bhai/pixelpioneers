@@ -10,7 +10,7 @@ interface NavigationOverlayProps {
   setIsOpen: (value: boolean) => void
 }
 
-const menuItems = ["HOME", "ABOUT", "SERVICE", "PROJECT", "CASE STUDY", "CONTACT"]
+const menuItems = ["HOME", "ABOUT", "SERVICE", "PROJECT", "CASESTUDY", "CONTACT"]
 
 export default function NavigationOverlay({ isOpen }: NavigationOverlayProps) {
 

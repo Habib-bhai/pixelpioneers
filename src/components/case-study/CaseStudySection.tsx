@@ -4,6 +4,8 @@ import { useRef } from "react"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 import { CaseStudyCard } from "./CaseStudyCard" 
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
+
 
 const caseStudies = [
   {
@@ -46,11 +48,12 @@ export default function CaseStudiesSection() {
           </div>
 
           <Button
+          asChild
             variant="outline"
             className={`transition-all duration-700 transform
               ${isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"}`}
           >
-            View All Case
+           <Link href={"/casestudy"}> View All Case</Link>
           </Button>
         </div>
 

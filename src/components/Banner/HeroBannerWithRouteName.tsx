@@ -17,7 +17,7 @@ export default function HeroBannerWithRouteName({ pageName, tagline }: { pageNam
             <Image src={"/images/about-hero-particle-2.jpg"} alt='about-hero-particle' width={200} height={200} className='hidden md:block object-cover h-32 w-40 absolute opacity-70 right-16 bottom-0 rounded-t-full' />
 
             {/*page name box  */}
-            <div className={`${saira.className} text-gray-400 bg-[#184232] h-8 w-28 py-2  text-xs flex justify-center items-center gap-3`}>
+            <div className={`${saira.className} text-gray-400 bg-[#184232] h-8 px-5 py-2  text-xs flex justify-center items-center gap-3`}>
                 <div className='h-2 w-2 rounded-full bg-white' />
                 {pageName}
                 <div className='h-2 w-2 rounded-full bg-white' />

@@ -19,7 +19,7 @@ export function CaseStudyCard({ category, title, image, isInView = false, index 
 
   return (
     <motion.div
-      className="overflow-x-hidden group relative py-12 first:pt-0 last:pb-0"
+      className="overflow-x-hidden group relative py-12 px-5 first:pt-0 last:pb-0"
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
