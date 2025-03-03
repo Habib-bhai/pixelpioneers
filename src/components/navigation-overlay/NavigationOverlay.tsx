@@ -67,7 +67,7 @@ export default function NavigationOverlay({ isOpen }: NavigationOverlayProps) {
                     }}
                     className="group"
                   >
-                    <Link href={`${item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`}`}>
+                    <Link  href={`${item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`}`}>
                       <button className="flex items-center gap-4 text-2xl lg:text-3xl font-bold">
                         <span className="relative">
                           {item}
