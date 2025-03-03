@@ -2,18 +2,17 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import { Facebook, Plus, Twitter, PinIcon as Pinterest, Instagram } from "lucide-react"
-import { useRouter } from "next/navigation"
+import Link from "next/link"
+
 
 interface NavigationOverlayProps {
   isOpen: boolean
   setIsOpen: (value: boolean) => void
 }
 
-const menuItems = ["HOME", "ABOUT", "SERVICE", "PROJECT", "CASE STUDY", "BLOG", "CONTACT"]
+const menuItems = ["HOME", "ABOUT", "SERVICE", "PROJECT", "CASE STUDY", "CONTACT"]
 
 export default function NavigationOverlay({ isOpen }: NavigationOverlayProps) {
-
-  const router = useRouter()
 
   return (
     <AnimatePresence>
@@ -55,7 +54,7 @@ export default function NavigationOverlay({ isOpen }: NavigationOverlayProps) {
 
             {/* Navigation Links */}
             <nav className="z-10 flex items-center px-6 lg:px-20 w-full lg:w-auto">
-              <div className="space-y-6 w-full lg:w-auto">
+              <div className="space-y-7 w-full lg:w-auto">
                 {menuItems.map((item, index) => (
                   <motion.div
                     key={item}
@@ -68,15 +67,17 @@ export default function NavigationOverlay({ isOpen }: NavigationOverlayProps) {
                     }}
                     className="group"
                   >
-                    <button onClick={() => router.push(`/${item.toLowerCase()}`)} className="flex items-center gap-4 text-2xl lg:text-4xl font-bold">
-                      <span className="relative">
-                        {item}
-                        <span className="absolute inset-0 text-transparent [-webkit-text-stroke:1px_white] group-hover:text-white transition-colors duration-300">
+                    <Link href={`${item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`}`}>
+                      <button className="flex items-center gap-4 text-2xl lg:text-3xl font-bold">
+                        <span className="relative">
                           {item}
+                          <span className="absolute inset-0 text-transparent [-webkit-text-stroke:1px_white] group-hover:text-white transition-colors duration-300">
+                            {item}
+                          </span>
                         </span>
-                      </span>
-                      <Plus className="h-6 w-6 transition-transform group-hover:rotate-45 duration-300" />
-                    </button>
+                        <Plus className="h-6 w-6 transition-transform group-hover:rotate-45 duration-300" />
+                      </button>
+                    </Link>
                   </motion.div>
                 ))}
               </div>

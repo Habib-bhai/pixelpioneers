@@ -13,7 +13,6 @@ import CreativeBanner from "@/components/Banner/CreativeBanner"
 import SuccessStories from "@/components/successStories/SuccessStories"
 import ContactUs from "@/components/contact/Contactus"
 import OurExperts from "@/components/team/OurExperts"
-import Footer from "@/components/footer/Footer"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -74,14 +73,14 @@ export default function Home() {
           <NavigationOverlay isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
           <Hero />
           <ValuesCulture />
-          <ServicesSection/>
-          <ProcessSection/>
+          <ServicesSection />
+          <ProcessSection />
           <CaseStudiesSection />
-          <CreativeBanner/>
-          <SuccessStories  stories={dummyStories}/>
-          <ContactUs/>
-          <OurExperts/>
-          <Footer/>
+          <CreativeBanner />
+          <SuccessStories stories={dummyStories} />
+          <ContactUs />
+          <OurExperts />
+          
         </div>
 
       }
