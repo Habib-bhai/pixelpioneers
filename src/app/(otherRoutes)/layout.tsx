@@ -20,7 +20,6 @@ export default function RootLayout({
         <main className="dark">
             <div className={`${inter.className} overflow-x-hidden`}>
                 <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-
                 <NavigationOverlay isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
 
                 {children}

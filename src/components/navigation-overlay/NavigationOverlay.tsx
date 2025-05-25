@@ -12,7 +12,7 @@ interface NavigationOverlayProps {
 
 const menuItems = ["HOME", "ABOUT", "SERVICE", "PROJECT", "CASESTUDY", "CONTACT"]
 
-export default function NavigationOverlay({ isOpen }: NavigationOverlayProps) {
+export default function NavigationOverlay({ isOpen, setIsOpen }: NavigationOverlayProps) {
 
   return (
     <AnimatePresence>
@@ -67,7 +67,7 @@ export default function NavigationOverlay({ isOpen }: NavigationOverlayProps) {
                     }}
                     className="group"
                   >
-                    <Link  href={`${item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`}`}>
+                    <Link  onClick={()=> setIsOpen(false)} href={`${item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`}`}>
                       <button className="flex items-center gap-4 text-2xl lg:text-3xl font-bold">
                         <span className="relative">
                           {item}

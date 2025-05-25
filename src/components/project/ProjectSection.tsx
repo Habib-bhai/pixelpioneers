@@ -3,82 +3,120 @@
 import { useState } from "react"
 import Image from "next/image"
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 // Sample project data
 const projects = [
     {
         id: 1,
-        title: "Optimizing IT Operations",
+        title: "The School",
+        description: "Product Designed to Fill the Gap Between Schools, Students, Parents and Teachers",
+        image: "/images/theschool.png",
         category: "Web Development",
-        image: "/images/appdevsuccess.jpeg",
+        metrics: "Increased Efficiency in Manangement",
+        link: "https://school-management-system-bro.vercel.app/",
     },
     {
         id: 2,
-        title: "Maximizing Efficiency With DevOps",
+        title: "Custom E-Commerce",
+        description: "Implemented a fully custom solution, created everything according to client's imagination.",
+        image: "/images/ecomer.png",
         category: "Web Development",
-        image: "/images/cloudinovation.jpg",
+        metrics: "User base grew by 25%",
+        link: "https://milestone-3-ecommerce-website-ebon.vercel.app/",
     },
     {
         id: 3,
-        title: "Implementing Robotic Process Automation",
+        title: "Askary Institute",
+        description: "A language and IELTS institute website, helping them in their branding, students aquiring and conducting TESTS",
+        image: "/images/aksari.png",
         category: "Web Development",
-        image: "/images/cybersecurity.jpg",
+        metrics: "Increase in business, and testing process",
+        link: "https://askary-institute-web.vercel.app/",
     },
-    // Add more projects as needed for pagination
     {
         id: 4,
-        title: "Cloud Infrastructure Solutions",
-        category: "Web Development",
-        image: "/images/aipower.jpg",
-    },
-    {
-        id: 5,
-        title: "AI-Powered Development",
-        category: "Web Development",
-        image: "/images/sci-fi.jpg",
-    },
-    {
-        id: 6,
-        title: "Blockchain Integration Services",
-        category: "Web Development",
-        image: "/images/cloud.jpg",
-    },
-    {
-        id: 7,
         title: "Optimizing IT Operations",
         category: "Web Development",
         image: "/images/appdevsuccess.jpeg",
+        link: "#",
     },
     {
-        id: 8,
+        id: 5,
         title: "Maximizing Efficiency With DevOps",
         category: "Web Development",
         image: "/images/cloudinovation.jpg",
+        link: "#",
     },
     {
-        id: 9,
+        id: 6,
         title: "Implementing Robotic Process Automation",
         category: "Web Development",
         image: "/images/cybersecurity.jpg",
+        link: "#",
     },
-    // Add more projects as needed for pagination
     {
-        id: 10,
+        id: 7,
         title: "Cloud Infrastructure Solutions",
         category: "Web Development",
         image: "/images/aipower.jpg",
+        link: "#",
     },
     {
-        id: 11,
+        id: 8,
         title: "AI-Powered Development",
         category: "Web Development",
         image: "/images/sci-fi.jpg",
+        link: "#",
     },
     {
-        id: 12,
+        id: 9,
         title: "Blockchain Integration Services",
         category: "Web Development",
         image: "/images/cloud.jpg",
+        link: "#",
+    },
+    {
+        id: 10,
+        title: "Optimizing IT Operations",
+        category: "Web Development",
+        image: "/images/appdevsuccess.jpeg",
+        link: "#",
+    },
+    {
+        id: 11,
+        title: "Maximizing Efficiency With DevOps",
+        category: "Web Development",
+        image: "/images/cloudinovation.jpg",
+        link: "#",
+    },
+    {
+        id: 12,
+        title: "Implementing Robotic Process Automation",
+        category: "Web Development",
+        image: "/images/cybersecurity.jpg",
+        link: "#",
+    },
+    {
+        id: 13,
+        title: "Cloud Infrastructure Solutions",
+        category: "Web Development",
+        image: "/images/aipower.jpg",
+        link: "#",
+    },
+    {
+        id: 14,
+        title: "AI-Powered Development",
+        category: "Web Development",
+        image: "/images/sci-fi.jpg",
+        link: "#",
+    },
+    {
+        id: 15,
+        title: "Blockchain Integration Services",
+        category: "Web Development",
+        image: "/images/cloud.jpg",
+        link: "#",
     },
 ]
 
@@ -104,27 +142,29 @@ export default function ProjectsSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     {currentProjects.map((project) => (
-                        <div key={project.id} className="group relative">
-                            {/* Project Image */}
-                            <div className="relative h-[300px] w-full overflow-hidden">
-                                <Image src={project.image} alt={project.title} fill className="object-cover" />
-                                {/* Dark Overlay */}
-                                <div className="absolute inset-0 bg-black/60" />
-                            </div>
+                        <Link href={project.link!}>
+                            <div key={project.id} className="group relative">
+                                {/* Project Image */}
+                                <div className="relative h-[300px] w-full overflow-hidden">
+                                    <Image src={project.image!} alt={project.title} fill className="object-cover" />
+                                    {/* Dark Overlay */}
+                                    <div className="absolute inset-0 bg-black/60" />
+                                </div>
 
-                            {/* Project Content */}
-                            <div className="absolute bottom-0 left-0 right-0 p-6">
-                                <div className="flex justify-between items-end">
-                                    <div>
-                                        <span className="text-emerald-500 text-sm mb-2 block">{project.category}</span>
-                                        <h3 className="text-white text-xl font-bold">{project.title}</h3>
+                                {/* Project Content */}
+                                <div className="absolute bottom-0 left-0 right-0 p-6">
+                                    <div className="flex justify-between items-end">
+                                        <div>
+                                            <span className="text-emerald-500 text-sm mb-2 block">{project.category}</span>
+                                            <h3 className="text-white text-xl font-bold">{project.title}</h3>
+                                        </div>
+                                        <button className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white transform transition-transform group-hover:rotate-45">
+                                            <ArrowRight size={20} />
+                                        </button>
                                     </div>
-                                    <button className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white transform transition-transform group-hover:rotate-45">
-                                        <ArrowRight size={20} />
-                                    </button>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 

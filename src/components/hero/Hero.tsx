@@ -42,7 +42,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="text-base lg:text-lg text-gray-400 leading-relaxed"
           >
-            We are a team of talented developers who love to create seamless experiences for business, to help them GROWWWWWW! And reach their POTENTIAL
+            We are a team of Professionals who love to create Business Solutions, to help them GROWWWWWW! And reach their POTENTIAL.
           </motion.p>
           <motion.button
             initial={{ opacity: 0, y: 20 }}
@@ -56,11 +56,11 @@ export default function Hero() {
         </div>
         <div className="relative w-full lg:w-1/2 h-[300px] lg:h-full mt-8 lg:mt-0">
           <Image
-            src="/images/BANNER.png"
+            src="/images/dev-team.png"
             alt="Team photo"
             height={1000}
             width={1000}
-            className="object-cover w-full h-full rounded-lg lg:rounded-none"
+            className="object-cover object-[30%] w-full h-full rounded-lg lg:rounded-none"
           />
         </div>
       </div>

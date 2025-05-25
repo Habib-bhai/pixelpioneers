@@ -22,7 +22,7 @@ function AboutPage() {
                 <div>
                     <h1 className={`${saira.className} text-3xl font-bold mb-3 ml-[5%] md:ml-0`}>Our Approach</h1>
                     <p className={`${saira.className} text-xs text-gray-300 md:w-1/2 ml-[5%] md:ml-0`}>
-                        Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.
+                       We first collect client requirements, by multiple meetings, complete Our Research, finalize the requirements and milestones and ROCK THE WORK.
                     </p>
                 </div>
 
@@ -55,14 +55,14 @@ function AboutPage() {
                             <div className='col-span-1 flex flex-col justify-center items-center gap-3'>
                                 <h3 className={`${saira.className} text-base font-bold text-center `}>Customized Solutions</h3>
                                 <p className={`${saira.className} text-xs text-center md:w-48`}>
-                                    Services are professional w offerings provided.
+                                    We Bring your Ideas to life.
                                 </p>
                             </div>
 
                             <div className='col-span-1 flex flex-col justify-center items-center gap-3'>
                                 <h3 className={`${saira.className} text-base font-bold text-center`}>Quality Reliability</h3>
                                 <p className={`${saira.className} text-xs text-center md:w-48`}>
-                                    Services are professional w offerings provided.
+                                    Your Success Our Priority, by ensuring ULTIMATE level quality
                                 </p>
                             </div>
                         </div>

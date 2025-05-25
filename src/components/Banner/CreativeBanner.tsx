@@ -12,14 +12,13 @@ export default function GroundbreakingBanner() {
 
   // Headline parts with color styling
   const parts = [
-    { text: "#1", color: "text-green-500" },
-    { text: " Best IT Agency Services And Solutions Company ", color: "text-white" },
-    { text: "Since 2020", color: "text-green-500" },
+    { text: "#WE ARE RELIABLE", color: "text-green-500" },
+    { text: "IT Agency Services And Solutions Company ", color: "text-white" },
   ];
   const headlineChars = parts.flatMap((part) =>
     part.text.split("").map((char) => ({ char, color: part.color }))
   );
-  const hashtags = "# Learn # useful information # from our insights # and experience".split(" ");
+  const hashtags = "# innovative # Performant # Customer Caring # Professionals".split(" ");
 
   // Starfield background
   const stars = Array.from({ length: 50 }, (_, i) => (

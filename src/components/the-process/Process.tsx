@@ -9,19 +9,19 @@ const processes = [
     number: "01",
     title: "Research & Discovery",
     description:
-      "Web development is the process offer than operdol creating otar eros augue, ultricies sedatoni quamot authol websites and web. creatingot otar erosmont augue, ultricies sed.",
+      "Our process begins with thorough research and discovery to understand client needs and market trends. We analyze competitors, and define project goals and milestones.",
   },
   {
     number: "02",
-    title: "Industry Expertise",
+    title: "Design & Development",
     description:
-      "Web development is the process offer than operdol creating otar eros augue, ultricies sedatoni quamot authol websites and web. creatingot otar erosmont augue, ultricies sed.",
+      "In this phase, we finalize the design i.e. UI. And start Development on it, and keep CLIENT UP-TO-DATE on progress.",
   },
   {
     number: "03",
     title: "Quality Assurance",
     description:
-      "Web development is the process offer than operdol creating otar eros augue, ultricies sedatoni quamot authol websites and web. creatingot otar erosmont augue, ultricies sed.",
+      "After developing the solution, it goes through multiple processes of testing to ensure top-notch quality.",
   },
 ]
 
@@ -55,7 +55,7 @@ export default function ProcessSection() {
             className={`max-w-sm text-zinc-400 transition-all duration-700 delay-300 transform
               ${isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"}`}
           >
-            Morbi interdum pellentesque nunc, luctusongi pretium nulla luctus at Aliquam.
+            Our process involves a series of steps, including research, design, development, testing, and deployment.
           </p>
         </div>
 

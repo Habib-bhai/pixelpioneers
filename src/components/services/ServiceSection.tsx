@@ -2,45 +2,57 @@
 
 import { useRef } from "react"
 import { ServiceCard } from "./ServiceCard"  
-import { Code, Cloud, Shield, Database, AppWindow, Share2 } from "lucide-react"
+import { Code, Cloud, Shield, Database, AppWindow, Share2, LayoutList, Building2, ShoppingCart, UploadCloud, Plug, Monitor, LifeBuoy, FileText } from "lucide-react"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
 const services = [
   {
-    icon: <Code className="w-full h-full" />,
-    title: "Web Development",
+    icon: <LayoutList className="w-full h-full" />,
+    title: "Custom Web Application Development",
     description:
-      "Web development is the process of creating websites and web applications for the internet or intranet.",
+      "Tailored solutions to meet specific business needs. We create web applications that are scalable, secure, and user-friendly.",
   },
   {
-    icon: <Cloud className="w-full h-full" />,
-    title: "Cloud Solutions",
+    icon: <FileText className="w-full h-full" />,
+    title: "Headless CMS Integration",
     description:
-      "Cloud solutions refer to the use of cloud computing technology to provide services and solutions over the internet.",
+      "Flexible content management with systems like Sanity. We integrate headless CMS solutions to provide a robust backend for your content, allowing for easy updates and management.",
   },
   {
-    icon: <Shield className="w-full h-full" />,
-    title: "Cyber Security",
+    icon: <Building2 className="w-full h-full" />,
+    title: "Enterprise Application Development",
     description:
-      "Cybersecurity refers to the protection of computer systems, networks, and data from theft, damage, or unauthorized access.",
+      "Robust applications designed for large-scale operations. We specialize in building enterprise-level software that enhances productivity and efficiency.",
   },
   {
-    icon: <Database className="w-full h-full" />,
-    title: "Data Analytic",
+    icon: <ShoppingCart className="w-full h-full" />,
+    title: "E-Commerce Solutions",
     description:
-      "Data analytics refers to the process of examining and interpreting large datasets to extract insights and draw conclusions.",
+      "Feature-rich online stores with secure payment integrations. We develop custom e-commerce platforms that provide seamless shopping experiences and drive sales.",
   },
   {
-    icon: <AppWindow className="w-full h-full" />,
-    title: "Software Development",
+    icon: <Plug className="w-full h-full" />,
+    title: "API Development & Integration",
     description:
-      "Software development is the process of creating computer software programs that perform specific functions or tasks.",
+      "Connect front-end interfaces with robust back-end services. We build and integrate APIs that enable smooth communication between different backend components and frontends, enhancing functionality and user experience.",
   },
   {
-    icon: <Share2 className="w-full h-full" />,
-    title: "Digital Marketing",
+    icon: <UploadCloud className="w-full h-full" />,
+    title: "Migration & Upgradation Services",
     description:
-      "Digital marketing refers to the use of digital channels and technologies to promote products, services, or brands.",
+      "Smooth transition from legacy systems to modern MERN-based applications. We ensure a seamless migration process, preserving data integrity and minimizing downtime.",
+  },
+  {
+    icon: <Monitor className="w-full h-full" />,
+    title: "Single Page Applications (SPAs)",
+    description:
+      "Interactive SPAs for enhanced user experiences. We create SPAs that load quickly and provide a smooth, app-like experience, improving user engagement and satisfaction.",
+  },
+  {
+    icon: <LifeBuoy className="w-full h-full" />,
+    title: "Maintenance, Debugging & Support",
+    description:
+      "Ongoing support to ensure application stability and performance. We provide continuous maintenance and support services to keep your applications running smoothly, addressing any issues promptly.",
   },
 ]
 

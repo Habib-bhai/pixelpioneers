@@ -5,7 +5,16 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Card } from "@/components/team/TeamCard"
 import Autoplay from "embla-carousel-autoplay"
 import { EmblaCarouselType } from "embla-carousel"
+import { AnimatedTestimonials } from "../ui/animated-testimonials"
 // Team member data
+
+
+// quote: string;
+//   name: string;
+//   designation: string;
+//   src: string
+
+
 const teamMembers = [
     {
         id: 1,
@@ -33,6 +42,35 @@ const teamMembers = [
     },
     // Add more team members as needed
 ]
+
+const testimonial = [
+    {
+    name:"HABIB",
+    quote: "The Founding Father And Brain of the Company. Who strategize plan and Keeps the company on the progress track",
+    designation: "CEO",
+    src: "/images/habib.jpg"
+},
+    {
+    name:"IBAD",
+    quote: "The CTO, who looks after our tech stacks and over all technologies in all the projects.",
+    designation: "CTO",
+    src: "/images/pexels1.jpg"
+},
+    {
+    name:"AUNT JUDY",
+    quote: "She is the one and only Marketing Executive at PEXEL PIONEERs, she has took our sales to a sky rocketing levels. ",
+    designation: "Marketing Executive",
+    src: "/images/contact.jpg"
+},
+    {
+    name:"Anees",
+    quote: "The man behind Every operation in our Company, he make sures every operation process goes like a well oiled machine. ",
+    designation: "COO",
+    src: "/images/aipower.jpg"
+},
+
+]
+
 
 export function TeamSection() {
     const [api, setApi] = React.useState<EmblaCarouselType | undefined>(undefined)
@@ -62,7 +100,7 @@ export function TeamSection() {
 
                 {/* Carousel */}
                 <div className="relative">
-                    <Carousel
+                    {/* <Carousel
                         setApi={setApi}
                         plugins={[plugin.current]}
                         className="w-full"
@@ -80,7 +118,12 @@ export function TeamSection() {
                         </CarouselContent>
                         <CarouselPrevious className="hidden md:flex" />
                         <CarouselNext className="hidden md:flex" />
-                    </Carousel>
+                    </Carousel> */}
+
+
+                            
+                    <AnimatedTestimonials testimonials={testimonial} />
+
 
                     {/* Custom Dots */}
                     <div className="flex justify-center gap-2 mt-8">

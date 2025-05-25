@@ -28,25 +28,25 @@ export default function Home() {
 
   const dummyStories = [
     {
-      title: "Project Alpha",
-      description: "Transformed a legacy system into a modern cloud-based solution.",
-      imageUrl: "/images/cloud.jpg",
-      metrics: "Increased efficiency by 40%",
-      link: "#",
+      title: "The School",
+      description: "Product Designed to Fill the Gap Between Schools, Students, Parents and Teachers",
+      imageUrl: "/images/theschool.png",
+      metrics: "Increased Efficiency in Manangement",
+      link: "https://school-management-system-bro.vercel.app/",
     },
     {
-      title: "Project Beta",
-      description: "Developed a mobile app that boosted user engagement significantly.",
-      imageUrl: "/images/appdevsuccess.jpeg",
+      title: "Custom E-Commerce",
+      description: "Implemented a fully custom solution, created everything according to client's imagination.",
+      imageUrl: "/images/ecomer.png",
       metrics: "User base grew by 25%",
-      link: "#",
+      link: "https://milestone-3-ecommerce-website-ebon.vercel.app/",
     },
     {
-      title: "Project Gamma",
-      description: "Implemented a new marketing strategy that doubled the conversion rate.",
-      imageUrl: "/images/cybersecurity.jpg",
-      metrics: "Conversion rate increased by 100%",
-      link: "#",
+      title: "Askary Institute",
+      description: "A language and IELTS institute website, helping them in their branding, students aquiring and conducting TESTS",
+      imageUrl: "/images/aksari.png",
+      metrics: "Increase in business, and testing process",
+      link: "https://askary-institute-web.vercel.app/",
     },
     {
       title: "Project Delta",
@@ -75,7 +75,7 @@ export default function Home() {
           <ValuesCulture />
           <ServicesSection />
           <ProcessSection />
-          <CaseStudiesSection />
+          {/* <CaseStudiesSection /> */}
           <CreativeBanner />
           <SuccessStories stories={dummyStories} />
           <ContactUs />

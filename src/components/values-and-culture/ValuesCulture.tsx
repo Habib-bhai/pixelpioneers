@@ -47,13 +47,11 @@ export default function AnimatedSection() {
                     <h1 className="text-5xl md:text-6xl font-bold">Who We Are</h1>
 
                     <p className="text-gray-400 text-lg">
-                        Morbi interdum pellentesque nunc, luctus pretium nulla luctus at. Aliquam cursus nunc arcu, condimentum
-                        efficitur tellus iaculis faucibus. Quisque gravida vel magna quis aliquam. Nam semper posuere risus, a
-                        gravida sapien tincidunt ac. Nam ac lacinia arcu. Aliquam erat volutpat. Curabitur consectetur nisi.
+                        At PexelPioneers, we accelerate business growth through innovative web development. Leveraging Jamstack and MERN Stack technologies, we create high-performance digital solutions that enhance user EXPERIENCES, SOLVE PROBLEMS, BOOST ENGAGEMENT, and DRIVE SUCCESS. Partner with us to transform ideas into reality.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {["Creative Strategy", "Unique Production", "Rebranding Design", "Corporate Identity"].map((item, i) => (
+                        {["Creative Production", "Custom Solutions", "Re-building Websites", "Highly SEO Optimized", "Highly Scalable", "Highly Responsive"].map((item, i) => (
                             <div
                                 key={i}
                                 className={`flex items-center gap-3 transition-all duration-700 transform
@@ -66,10 +64,9 @@ export default function AnimatedSection() {
                         ))}
                     </div>
 
-                    <p className="text-gray-400">
-                        Morbi interdum pellentesque nunc, luctus pretium nulla luctus at. Aliquam cursus nunc arcu, condimentum
-                        efficitur tellus iaculis faucibus. Quisque gravida vel magna quis aliquam. Nam semper posuere risus.
-                    </p>
+                    {/* <p className="text-gray-400">
+                        Our Jamstack expertise helps businesses build SEO-optimized websites that excel in speed and scalability. By leveraging pre-rendered content and CDNs, we enhance core web vitals, boost search engine rankings, and drive higher organic traffic. This results in better user experiences and increased online visibility.
+                    </p> */}
                 </div>
 
                 {/* Image Content */}
