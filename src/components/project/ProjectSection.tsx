@@ -142,8 +142,8 @@ export default function ProjectsSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     {currentProjects.map((project) => (
-                        <Link href={project.link!}>
-                            <div key={project.id} className="group relative">
+                        <Link href={project.link!} key={project.id}>
+                            <div  className="group relative">
                                 {/* Project Image */}
                                 <div className="relative h-[300px] w-full overflow-hidden">
                                     <Image src={project.image!} alt={project.title} fill className="object-cover" />

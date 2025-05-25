@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import { ServiceCard } from "./ServiceCard"  
-import { Code, Cloud, Shield, Database, AppWindow, Share2, LayoutList, Building2, ShoppingCart, UploadCloud, Plug, Monitor, LifeBuoy, FileText } from "lucide-react"
+import {  LayoutList, Building2, ShoppingCart, UploadCloud, Plug, Monitor, LifeBuoy, FileText } from "lucide-react"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
 const services = [

@@ -1,8 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import { Card } from "@/components/team/TeamCard"
+// import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+// import { Card } from "@/components/team/TeamCard"
 import Autoplay from "embla-carousel-autoplay"
 import { EmblaCarouselType } from "embla-carousel"
 import { AnimatedTestimonials } from "../ui/animated-testimonials"
@@ -45,37 +45,39 @@ const teamMembers = [
 
 const testimonial = [
     {
-    name:"HABIB",
-    quote: "The Founding Father And Brain of the Company. Who strategize plan and Keeps the company on the progress track",
-    designation: "CEO",
-    src: "/images/habib.jpg"
-},
+        name: "HABIB",
+        quote: "The Founding Father And Brain of the Company. Who strategize plan and Keeps the company on the progress track",
+        designation: "CEO",
+        src: "/images/habib.jpg"
+    },
     {
-    name:"IBAD",
-    quote: "The CTO, who looks after our tech stacks and over all technologies in all the projects.",
-    designation: "CTO",
-    src: "/images/pexels1.jpg"
-},
+        name: "IBAD",
+        quote: "The CTO, who looks after our tech stacks and over all technologies in all the projects.",
+        designation: "CTO",
+        src: "/images/pexels1.jpg"
+    },
     {
-    name:"AUNT JUDY",
-    quote: "She is the one and only Marketing Executive at PEXEL PIONEERs, she has took our sales to a sky rocketing levels. ",
-    designation: "Marketing Executive",
-    src: "/images/contact.jpg"
-},
+        name: "AUNT JUDY",
+        quote: "She is the one and only Marketing Executive at PEXEL PIONEERs, she has took our sales to a sky rocketing levels. ",
+        designation: "Marketing Executive",
+        src: "/images/contact.jpg"
+    },
     {
-    name:"Anees",
-    quote: "The man behind Every operation in our Company, he make sures every operation process goes like a well oiled machine. ",
-    designation: "COO",
-    src: "/images/aipower.jpg"
-},
+        name: "Anees",
+        quote: "The man behind Every operation in our Company, he make sures every operation process goes like a well oiled machine. ",
+        designation: "COO",
+        src: "/images/aipower.jpg"
+    },
 
 ]
 
 
 export function TeamSection() {
+    //    eslint-disable-next-line
     const [api, setApi] = React.useState<EmblaCarouselType | undefined>(undefined)
     const [current, setCurrent] = React.useState(0)
 
+    //    eslint-disable-next-line
     const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: true }))
 
     React.useEffect(() => {
@@ -121,7 +123,7 @@ export function TeamSection() {
                     </Carousel> */}
 
 
-                            
+
                     <AnimatedTestimonials testimonials={testimonial} />
 
 

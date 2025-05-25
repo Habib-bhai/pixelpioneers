@@ -68,9 +68,8 @@ const SuccessStories: React.FC<{ stories: SuccessStory[] }> = ({ stories }) => {
         </h2>
         <div className="space-y-8">
           {stories.map((story, index) => (
-            <Link href={story.link!} target="_blank">
+            <Link href={story.link!} target="_blank" key={index}>
               <motion.div
-                key={index}
                 className="bg-black p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center justify-between"
                 variants={cardVariants}
                 initial="hidden"
