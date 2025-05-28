@@ -32,7 +32,7 @@ export default function ServicesComponent() {
     }, [])
 
     return (
-        <div className="bg-black mb-32 text-white flex flex-col justify-center items-center w-screen overflow-x-hidden relative">
+        <div className="bg-black my-32 text-white flex flex-col justify-center items-center w-screen overflow-x-hidden relative">
             {/* Animated background grid */}
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute inset-0" style={{
@@ -61,7 +61,7 @@ export default function ServicesComponent() {
                 ))}
             </div>
 
-            <h1 className="text-5xl text-start mb-20 relative z-10 bg-gradient-to-r from-white to-emerald-300 bg-clip-text text-transparent font-bold md:font-extrabold">
+            <h1 className="text-center text-4xl md:text-5xl md:text-start mb-20 relative z-10 bg-gradient-to-r from-white to-emerald-300 bg-clip-text text-transparent font-bold md:font-extrabold">
                 Development Services
             </h1>
 
@@ -97,7 +97,7 @@ function Card({ color, service, index }: { color: string, service: any, index: n
 
     return (
         <div 
-            className={`group -mb-12 px-3 w-96  h-[480px] relative border-2 border-gray-700/30 flex flex-col justify-center items-center text-center cursor-pointer transition-all duration-500 hover:scale-105 hover:border-emerald-400/50`}
+            className={`group -mb-12 px-3 w-80 md:w-96  md:h-[480px] relative border-2 border-gray-700/30 flex flex-col justify-center items-center text-center cursor-pointer transition-all duration-500 hover:scale-105 hover:border-emerald-400/50`}
             style={{ 
                 backgroundColor: color,
                 animationDelay: `${index * 0.1}s`

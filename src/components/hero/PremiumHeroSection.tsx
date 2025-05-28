@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion"
-import { ArrowRight, Star, Zap, Shield, Award, ChevronDown, Sparkles, TrendingUp,  Plug, Bug } from "lucide-react"
+import { ArrowRight, Star, Zap, Shield, Award, ChevronDown, Sparkles, TrendingUp, Plug, Bug } from "lucide-react"
 import Link from "next/link"
 
 export default function PremiumHero() {
@@ -157,18 +157,18 @@ export default function PremiumHero() {
       </motion.div>
 
       {/* Main Content */}
-      <div className="relative z-20 container mx-auto px-6 pt-20 pb-32">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen">
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-20 sm:pb-32">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen">
           {/* Left Column - Revolutionary Content */}
           <motion.div
-            className="space-y-10"
+            className="space-y-6 sm:space-y-10"
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
             {/* Holographic Trust Badge */}
             <motion.div
-              className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-xl border border-white/20 rounded-full"
+              className="inline-flex items-center space-x-3 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-xl border border-white/20 rounded-full"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -191,7 +191,7 @@ export default function PremiumHero() {
             {/* Revolutionary Typography */}
             <motion.div className="space-y-6">
               <motion.h1
-                className="text-6xl lg:text-8xl font-black leading-none"
+                className="text-4xl sm:text-6xl lg:text-8xl font-black leading-none"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.6 }}
@@ -231,7 +231,7 @@ export default function PremiumHero() {
 
               {/* Breathing Text Effect */}
               <motion.p
-                className="my-10 text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl"
+                className="my-10 text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl"
                 animate={{
                   scale: [1, 1.02, 1],
                 }}
@@ -258,7 +258,7 @@ export default function PremiumHero() {
 
             {/* Interactive Metrics Dashboard */}
             <motion.div
-              className="grid grid-cols-2 lg:grid-cols-4 gap-6"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
@@ -312,7 +312,7 @@ export default function PremiumHero() {
               {/* Magnetic Primary CTA */}
               <Link href={"/contact"}>
                 <motion.button
-                  className="group relative px-10 py-5 bg-gradient-to-r from-emerald-500 to-blue-500 text-black font-bold text-lg rounded-full overflow-hidden"
+                  className="group relative px-6 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-emerald-500 to-blue-500 text-black font-bold text-base sm:text-lg rounded-full overflow-hidden"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onHoverStart={() => setIsHovering(true)}
@@ -362,7 +362,7 @@ export default function PremiumHero() {
               {/* Holographic Secondary CTA */}
               <Link href={"/project"}>
                 <motion.button
-                  className="group px-10 py-5 border-2 border-transparent bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-xl text-white font-semibold text-lg rounded-full relative overflow-hidden"
+                  className="group px-6 sm:px-10 py-4 sm:py-5 border-2 border-transparent bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-xl text-white font-semibold text-base sm:text-lg rounded-full relative overflow-hidden"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -382,7 +382,7 @@ export default function PremiumHero() {
 
             {/* Floating Trust Indicators */}
             <motion.div
-              className="flex items-center space-x-8 pt-6"
+              className="flex items-center space-x-4 sm:space-x-8 pt-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.8 }}
@@ -392,119 +392,210 @@ export default function PremiumHero() {
                 whileHover={{ scale: 1.05, color: "#10b981" }}
               >
                 <Shield className="w-6 h-6 text-emerald-500" />
-                <span className="text-sm font-medium">Quantum Security</span>
+                <span className="text-xs sm:text-sm font-medium">Quantum Security</span>
               </motion.div>
               <motion.div
                 className="flex items-center space-x-3 text-gray-400"
                 whileHover={{ scale: 1.05, color: "#3b82f6" }}
               >
                 <Award className="w-6 h-6 text-blue-500" />
-                <span className="text-sm font-medium">Future Award Winner</span>
+                <span className="text-xs sm:text-sm font-medium">Future Award Winner</span>
               </motion.div>
             </motion.div>
           </motion.div>
 
           {/* Right Column - 3D Interactive Showcase */}
           <motion.div
-            className="relative h-[600px] lg:h-[700px]"
+            className="relative h-[400px] sm:h-[500px] lg:h-[700px]"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            {/* Floating 3D Cards */}
-            <motion.div
-              className="absolute top-0 right-0 w-80 h-48 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 backdrop-blur-2xl border border-white/30 rounded-3xl p-6"
-              style={{ y: y1 }}
-              animate={{
-                rotateY: [0, 5, 0],
-                rotateX: [0, 2, 0],
-              }}
-              transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-              whileHover={{ scale: 1.05, rotateY: 10, rotateX: 5 }}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-white font-bold text-lg">Neural Performance</span>
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-                >
-                  <Zap className="w-8 h-8 text-emerald-400" />
-                </motion.div>
-              </div>
-
-              {/* Animated Progress Bars */}
-              <div className="space-y-3">
-                {["Speed", "Innovation", "Impact"].map((metric, index) => (
-                  <div key={metric} className="space-y-1">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-300">{metric}</span>
-                      <span className="text-emerald-400">99.{9 - index}%</span>
-                    </div>
-                    <div className="w-full bg-gray-700/50 rounded-full h-2">
-                      <motion.div
-                        className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full"
-                        initial={{ width: 0 }}
-                        animate={{ width: `${99 - index * 0.1}%` }}
-                        transition={{ duration: 2, delay: 2 + index * 0.3 }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Morphing Data Visualization */}
-            <motion.div
-              className="absolute bottom-0 left-0 w-96 h-64 bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-2xl border border-white/30 rounded-3xl p-6"
-              style={{ y: y2 }}
-              animate={{
-                rotateY: [0, -5, 0],
-                rotateX: [0, -2, 0],
-              }}
-              transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-              whileHover={{ scale: 1.05, rotateY: -10, rotateX: -5 }}
-            >
-              <div className="flex items-center justify-between mb-6">
-                <span className="text-white font-bold text-lg">Quantum Analytics</span>
-                <motion.span
-                  className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                >
-                  +∞%
-                </motion.span>
-              </div>
-
-              {/* 3D Chart Visualization */}
-              <div className="flex items-end justify-between h-24 space-x-2">
-                {[40, 65, 80, 95, 100, 85, 90].map((height, i) => (
+            {/* Mobile: Block layout, Desktop: Floating cards */}
+            <div className="block lg:hidden space-y-6">
+              {/* Neural Performance - Block on mobile */}
+              <motion.div
+                className="w-full bg-gradient-to-br from-emerald-500/20 to-blue-500/20 backdrop-blur-2xl border border-white/30 rounded-3xl p-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-white font-bold text-lg">Neural Performance</span>
                   <motion.div
-                    key={i}
-                    className="bg-gradient-to-t from-purple-600 to-pink-400 rounded-t-lg flex-1 relative"
-                    initial={{ height: 0, rotateX: 0 }}
-                    animate={{
-                      height: `${height}%`,
-                      rotateX: [0, 5, 0],
-                    }}
-                    transition={{
-                      height: { duration: 1, delay: 2.5 + i * 0.1 },
-                      rotateX: { duration: 3, repeat: Number.POSITIVE_INFINITY, delay: i * 0.2 },
-                    }}
-                    whileHover={{ scale: 1.1, rotateX: 10 }}
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                   >
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent rounded-t-lg"
-                      animate={{ opacity: [0.2, 0.5, 0.2] }}
-                      transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: i * 0.1 }}
-                    />
+                    <Zap className="w-8 h-8 text-emerald-400" />
                   </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                </div>
 
-            {/* Central Holographic Element */}
+                {/* Animated Progress Bars */}
+                <div className="space-y-3">
+                  {["Speed", "Innovation", "Impact"].map((metric, index) => (
+                    <div key={metric} className="space-y-1">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-300">{metric}</span>
+                        <span className="text-emerald-400">99.{9 - index}%</span>
+                      </div>
+                      <div className="w-full bg-gray-700/50 rounded-full h-2">
+                        <motion.div
+                          className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full"
+                          initial={{ width: 0 }}
+                          animate={{ width: `${99 - index * 0.1}%` }}
+                          transition={{ duration: 2, delay: 2 + index * 0.3 }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Quantum Analytics - Block on mobile */}
+              <motion.div
+                className="w-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-2xl border border-white/30 rounded-3xl p-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-white font-bold text-lg">Quantum Analytics</span>
+                  <motion.span
+                    className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                  >
+                    +∞%
+                  </motion.span>
+                </div>
+
+                {/* 3D Chart Visualization */}
+                <div className="flex items-end justify-between h-24 space-x-2">
+                  {[40, 65, 80, 95, 100, 85, 90].map((height, i) => (
+                    <motion.div
+                      key={i}
+                      className="bg-gradient-to-t from-purple-600 to-pink-400 rounded-t-lg flex-1 relative"
+                      initial={{ height: 0, rotateX: 0 }}
+                      animate={{
+                        height: `${height}%`,
+                        rotateX: [0, 5, 0],
+                      }}
+                      transition={{
+                        height: { duration: 1, delay: 2.5 + i * 0.1 },
+                        rotateX: { duration: 3, repeat: Number.POSITIVE_INFINITY, delay: i * 0.2 },
+                      }}
+                      whileHover={{ scale: 1.1, rotateX: 10 }}
+                    >
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent rounded-t-lg"
+                        animate={{ opacity: [0.2, 0.5, 0.2] }}
+                        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: i * 0.1 }}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Desktop: Floating cards */}
+            <div className="hidden lg:block">
+              {/* Floating 3D Cards */}
+              <motion.div
+                className="absolute top-0 right-0 w-64 sm:w-80 h-40 sm:h-48 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 backdrop-blur-2xl border border-white/30 rounded-3xl p-6"
+                style={{ y: y1 }}
+                animate={{
+                  rotateY: [0, 5, 0],
+                  rotateX: [0, 2, 0],
+                }}
+                transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+                whileHover={{ scale: 1.05, rotateY: 10, rotateX: 5 }}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-white font-bold text-lg">Neural Performance</span>
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                  >
+                    <Zap className="w-8 h-8 text-emerald-400" />
+                  </motion.div>
+                </div>
+
+                {/* Animated Progress Bars */}
+                <div className="space-y-3">
+                  {["Speed", "Innovation", "Impact"].map((metric, index) => (
+                    <div key={metric} className="space-y-1">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-300">{metric}</span>
+                        <span className="text-emerald-400">99.{9 - index}%</span>
+                      </div>
+                      <div className="w-full bg-gray-700/50 rounded-full h-2">
+                        <motion.div
+                          className="bg-gradient-to-r from-emerald-400 to-blue-400 h-2 rounded-full"
+                          initial={{ width: 0 }}
+                          animate={{ width: `${99 - index * 0.1}%` }}
+                          transition={{ duration: 2, delay: 2 + index * 0.3 }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Morphing Data Visualization */}
+              <motion.div
+                className="absolute bottom-0 left-0 w-72 sm:w-96 h-48 sm:h-64 bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-2xl border border-white/30 rounded-3xl p-6"
+                style={{ y: y2 }}
+                animate={{
+                  rotateY: [0, -5, 0],
+                  rotateX: [0, -2, 0],
+                }}
+                transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+                whileHover={{ scale: 1.05, rotateY: -10, rotateX: -5 }}
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-white font-bold text-lg">Quantum Analytics</span>
+                  <motion.span
+                    className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                  >
+                    +∞%
+                  </motion.span>
+                </div>
+
+                {/* 3D Chart Visualization */}
+                <div className="flex items-end justify-between h-24 space-x-2">
+                  {[40, 65, 80, 95, 100, 85, 90].map((height, i) => (
+                    <motion.div
+                      key={i}
+                      className="bg-gradient-to-t from-purple-600 to-pink-400 rounded-t-lg flex-1 relative"
+                      initial={{ height: 0, rotateX: 0 }}
+                      animate={{
+                        height: `${height}%`,
+                        rotateX: [0, 5, 0],
+                      }}
+                      transition={{
+                        height: { duration: 1, delay: 2.5 + i * 0.1 },
+                        rotateX: { duration: 3, repeat: Number.POSITIVE_INFINITY, delay: i * 0.2 },
+                      }}
+                      whileHover={{ scale: 1.1, rotateX: 10 }}
+                    >
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent rounded-t-lg"
+                        animate={{ opacity: [0.2, 0.5, 0.2] }}
+                        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: i * 0.1 }}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Central Holographic Element - Hidden on mobile */}
             <motion.div
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48"
+              className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 sm:w-48 h-32 sm:h-48"
               animate={{
                 rotateY: [0, 360],
                 scale: [1, 1.1, 1],
