@@ -33,6 +33,10 @@
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7"
   },
+  "resolutions": {
+  "@sanity/client": "^7.3.0"
+}
+  ,
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
