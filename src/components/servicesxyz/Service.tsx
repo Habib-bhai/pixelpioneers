@@ -153,7 +153,7 @@ function Card({ color, service, index }: { color: string, service: any, index: n
                     )}
                 </div>
 
-                <h2 className="text-3xl font-bold mb-4 group-hover:text-emerald-100 transition-colors duration-300 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent group-hover:from-emerald-100 group-hover:to-white">
+                <h2 className="text-2xl font-extrabold mb-4 group-hover:text-emerald-100 transition-colors duration-300 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent group-hover:from-emerald-100 group-hover:to-white">
                     {service.title}
                 </h2>
 
