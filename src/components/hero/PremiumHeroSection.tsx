@@ -2,10 +2,11 @@
 
 import { useState, useEffect, useRef } from "react"
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion"
-import { ArrowRight, Star, Zap, Shield, Award, ChevronDown, Sparkles, TrendingUp, Users, Globe } from "lucide-react"
+import { ArrowRight, Star, Zap, Shield, Award, ChevronDown, Sparkles, TrendingUp, Users, Globe, Plug, Bug } from "lucide-react"
+import Link from "next/link"
 
 export default function PremiumHero() {
-    // eslint-disable-next-line
+  // eslint-disable-next-line
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -14,7 +15,7 @@ export default function PremiumHero() {
   // Advanced parallax layers
   const y1 = useTransform(scrollY, [0, 500], [0, -150])
   const y2 = useTransform(scrollY, [0, 500], [0, -100])
-//   eslint-disable-next-line
+  //   eslint-disable-next-line
   const y3 = useTransform(scrollY, [0, 500], [0, -50])
 
   // Magnetic cursor effect
@@ -50,7 +51,7 @@ export default function PremiumHero() {
   }))
 
   return (
-    <div ref={containerRef} className="relative min-h-screen bg-black overflow-hidden">
+    <div ref={containerRef} className="mt-5 relative min-h-screen bg-black overflow-hidden">
       {/* Liquid Morphing Background */}
       <div className="absolute inset-0">
         {/* Animated Gradient Mesh */}
@@ -230,13 +231,13 @@ export default function PremiumHero() {
 
               {/* Breathing Text Effect */}
               <motion.p
-                className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl"
+                className="my-10 text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl"
                 animate={{
                   scale: [1, 1.02, 1],
                 }}
                 transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
               >
-                We don&apos;t just build websites—we engineer
+                Your Digital Transformation
                 <motion.span
                   className="text-emerald-400 font-bold mx-2"
                   animate={{
@@ -248,9 +249,10 @@ export default function PremiumHero() {
                   }}
                   transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                 >
-                  quantum leaps
+                  Co-pilots
                 </motion.span>
-                in digital evolution that redefine entire industries.
+                <br />
+                from proof-of-concept to rock-solid production.
               </motion.p>
             </motion.div>
 
@@ -262,9 +264,9 @@ export default function PremiumHero() {
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               {[
-                { icon: TrendingUp, value: "2847%", label: "ROI Increase", color: "emerald" },
-                { icon: Users, value: "10M+", label: "Users Impacted", color: "blue" },
-                { icon: Globe, value: "47", label: "Countries", color: "purple" },
+                { icon: TrendingUp, value: "80%", label: "ROI Increase", color: "emerald" },
+                { icon: Plug, value: "20+", label: "APIs Built", color: "blue" },
+                { icon: Bug, value: "90+", label: "Bugs Squashed", color: "purple" },
                 { icon: Zap, value: "0.3s", label: "Load Time", color: "pink" },
               ].map((metric, index) => (
                 <motion.div
@@ -308,71 +310,74 @@ export default function PremiumHero() {
               transition={{ duration: 0.8, delay: 1.6 }}
             >
               {/* Magnetic Primary CTA */}
-              <motion.button
-                className="group relative px-10 py-5 bg-gradient-to-r from-emerald-500 to-blue-500 text-black font-bold text-lg rounded-full overflow-hidden"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onHoverStart={() => setIsHovering(true)}
-                onHoverEnd={() => setIsHovering(false)}
-              >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-blue-400"
-                  animate={isHovering ? { scale: 1.1, rotate: 5 } : { scale: 1, rotate: 0 }}
-                  transition={{ duration: 0.3 }}
-                />
-                <span className="relative z-10 flex items-center justify-center space-x-3">
-                  <span>Launch Revolution</span>
-                  <motion.div animate={{ x: isHovering ? 5 : 0 }} transition={{ duration: 0.3 }}>
-                    <ArrowRight className="w-6 h-6" />
-                  </motion.div>
-                </span>
-
-                {/* Particle burst effect */}
-                {isHovering && (
+              <Link href={"/contact"}>
+                <motion.button
+                  className="group relative px-10 py-5 bg-gradient-to-r from-emerald-500 to-blue-500 text-black font-bold text-lg rounded-full overflow-hidden"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onHoverStart={() => setIsHovering(true)}
+                  onHoverEnd={() => setIsHovering(false)}
+                >
                   <motion.div
-                    className="absolute inset-0 pointer-events-none"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                  >
-                    {[...Array(8)].map((_, i) => (
-                      <motion.div
-                        key={i}
-                        className="absolute w-2 h-2 bg-white rounded-full"
-                        style={{
-                          left: "50%",
-                          top: "50%",
-                        }}
-                        animate={{
-                          x: Math.cos((i * 45 * Math.PI) / 180) * 30,
-                          y: Math.sin((i * 45 * Math.PI) / 180) * 30,
-                          opacity: [1, 0],
-                          scale: [0, 1, 0],
-                        }}
-                        transition={{ duration: 0.6, delay: i * 0.05 }}
-                      />
-                    ))}
-                  </motion.div>
-                )}
-              </motion.button>
+                    className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-blue-400"
+                    animate={isHovering ? { scale: 1.1, rotate: 5 } : { scale: 1, rotate: 0 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  <span className="relative z-10 flex items-center justify-center space-x-3">
+                    <span>Launch Revolution</span>
+                    <motion.div animate={{ x: isHovering ? 5 : 0 }} transition={{ duration: 0.3 }}>
+                      <ArrowRight className="w-6 h-6" />
+                    </motion.div>
+                  </span>
 
+                  {/* Particle burst effect */}
+                  {isHovering && (
+                    <motion.div
+                      className="absolute inset-0 pointer-events-none"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                    >
+                      {[...Array(8)].map((_, i) => (
+                        <motion.div
+                          key={i}
+                          className="absolute w-2 h-2 bg-white rounded-full"
+                          style={{
+                            left: "50%",
+                            top: "50%",
+                          }}
+                          animate={{
+                            x: Math.cos((i * 45 * Math.PI) / 180) * 30,
+                            y: Math.sin((i * 45 * Math.PI) / 180) * 30,
+                            opacity: [1, 0],
+                            scale: [0, 1, 0],
+                          }}
+                          transition={{ duration: 0.6, delay: i * 0.05 }}
+                        />
+                      ))}
+                    </motion.div>
+                  )}
+                </motion.button>
+              </Link>
               {/* Holographic Secondary CTA */}
-              <motion.button
-                className="group px-10 py-5 border-2 border-transparent bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-xl text-white font-semibold text-lg rounded-full relative overflow-hidden"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <motion.div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-                <span className="relative z-10 flex items-center justify-center space-x-3">
-                  <span>View Quantum Portfolio</span>
-                  <motion.div
-                    animate={{ y: [0, -3, 0] }}
-                    transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-                  >
-                    <ChevronDown className="w-6 h-6" />
-                  </motion.div>
-                </span>
-              </motion.button>
+              <Link href={"/project"}>
+                <motion.button
+                  className="group px-10 py-5 border-2 border-transparent bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-xl text-white font-semibold text-lg rounded-full relative overflow-hidden"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <motion.div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                  <span className="relative z-10 flex items-center justify-center space-x-3">
+                    <span>View Quantum Portfolio</span>
+                    <motion.div
+                      animate={{ y: [0, -3, 0] }}
+                      transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
+                    >
+                      <ChevronDown className="w-6 h-6" />
+                    </motion.div>
+                  </span>
+                </motion.button>
+              </Link>
             </motion.div>
 
             {/* Floating Trust Indicators */}
