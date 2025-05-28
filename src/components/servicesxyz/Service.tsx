@@ -97,7 +97,7 @@ function Card({ color, service, index }: { color: string, service: any, index: n
 
     return (
         <div 
-            className={`group -mb-12 px-3 w-96 md:w-[400px] h-[480px] relative border-2 border-gray-700/30 flex flex-col justify-center items-center text-center cursor-pointer transition-all duration-500 hover:scale-105 hover:border-emerald-400/50`}
+            className={`group -mb-12 px-3 w-96  h-[480px] relative border-2 border-gray-700/30 flex flex-col justify-center items-center text-center cursor-pointer transition-all duration-500 hover:scale-105 hover:border-emerald-400/50`}
             style={{ 
                 backgroundColor: color,
                 animationDelay: `${index * 0.1}s`

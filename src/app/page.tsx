@@ -1,7 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
 import Header from "@/components/header/Header"
-import Hero from "@/components/hero/Hero"
 import NavigationOverlay from "@/components/navigation-overlay/NavigationOverlay"
 import ValuesCulture from "@/components/values-and-culture/ValuesCulture"
 import { useLoadingDelay } from "@/hooks/use-loading-delay"
@@ -14,6 +13,7 @@ import SuccessStories from "@/components/successStories/SuccessStories"
 import ContactUs from "@/components/contact/Contactus"
 import OurExperts from "@/components/team/OurExperts"
 import ServicesComponent from "../components/servicesxyz/Service"
+import PremiumHero from "@/components/hero/PremiumHeroSection"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -72,7 +72,8 @@ export default function Home() {
         <div className="w-screen bg-black text-white overflow-x-hidden">
           <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
           <NavigationOverlay isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
-          <Hero />
+          {/* <Hero /> */}
+          <PremiumHero/>
           <ValuesCulture />
           {/* <ServicesSection /> */}
           <ServicesComponent/>
