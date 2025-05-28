@@ -6,13 +6,14 @@ import NavigationOverlay from "@/components/navigation-overlay/NavigationOverlay
 import ValuesCulture from "@/components/values-and-culture/ValuesCulture"
 import { useLoadingDelay } from "@/hooks/use-loading-delay"
 import LoadingScreen from "@/components/loading-screen/LoadingScreen"
-import ServicesSection from "@/components/services/ServiceSection"
+// import ServicesSection from "@/components/services/ServiceSection"
 import ProcessSection from "@/components/the-process/Process"
 // import CaseStudiesSection from "@/components/case-study/CaseStudySection"
 import CreativeBanner from "@/components/Banner/CreativeBanner"
 import SuccessStories from "@/components/successStories/SuccessStories"
 import ContactUs from "@/components/contact/Contactus"
 import OurExperts from "@/components/team/OurExperts"
+import ServicesComponent from "../components/servicesxyz/Service"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -73,7 +74,8 @@ export default function Home() {
           <NavigationOverlay isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
           <Hero />
           <ValuesCulture />
-          <ServicesSection />
+          {/* <ServicesSection /> */}
+          <ServicesComponent/>
           <ProcessSection />
           {/* <CaseStudiesSection /> */}
           <CreativeBanner />
