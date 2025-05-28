@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion"
-import { ArrowRight, Star, Zap, Shield, Award, ChevronDown, Sparkles, TrendingUp, Users, Globe, Plug, Bug } from "lucide-react"
+import { ArrowRight, Star, Zap, Shield, Award, ChevronDown, Sparkles, TrendingUp,  Plug, Bug } from "lucide-react"
 import Link from "next/link"
 
 export default function PremiumHero() {
